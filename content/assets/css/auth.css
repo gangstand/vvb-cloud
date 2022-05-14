@@ -1,0 +1,89 @@
+body {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2d7efc;
+}
+
+.container {
+    padding: 60px 0;
+    border-radius: 8px;
+
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #fff;
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.container--login {
+    width: 80%;
+}
+
+@media (min-width: 900px) {
+    .container--login {
+        width: 50%;
+    }
+}
+
+.form-floating {
+    width: 80%;
+}
+
+.btn-primary {
+    border-radius: 6px;
+    width: 80%;
+}
+
+
+.form-control {
+    border-radius: 6px;
+}
+
+.form-floating label {
+    font-size: 14px !important;
+}
+
+@media (min-width: 400px) {
+    .form-floating label {
+        font-size: 16px !important;
+    }
+}
+
+.btn-primary {
+    padding: 10px 0;
+    font-size: 16px;
+
+    background-color: #2d7efc;
+}
+
+.btn-primary:hover {
+    background-color: #045fed;
+}
+
+#particle-canvas {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

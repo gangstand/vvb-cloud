@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar">
+    <a href="{% url 'signature' %}" class="navbar__item" style={{ style_signature }}>
+        <img src="{% static '/img/signature-w.png' %}" alt="">
+        <p>Подписать документ</p>
+    </a>
+    <a href="{% url 'archive' %}" class="navbar__item" style={{ style_archive }}>
+        <img src="{% static '/img/docs-w.png' %}" alt="">
+        <p>Ваши документы</p>
+    </a>
+    <a href="{% url 'checking' %}" class="navbar__item" style={{ style_checking }}>
+        <img src="{% static '/img/check-w.png' %}" alt="">
+        <p>Проверить подпись</p>
+    </a>
+    <a href="{% url 'encrypt' %}" class="navbar__item" style={{ style_encrypt }}>
+        <img src="{% static '/img/lock-w.png' %}" alt="">
+        <p>Зашифровать</p>
+    </a>
+    <a href="{% url 'decrypt' %}" class="navbar__item" style={{ style_decrypt }}>
+        <img src="{% static '/img/unlock-w.png' %}" alt="">
+        <p>Расшифровать</p>
+    </a>
+</nav>

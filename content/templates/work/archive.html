@@ -1,0 +1,51 @@
+{% extends "work/work_base.html" %}
+
+{% load static %}
+
+{% block content %}
+            <div class="wrapper">
+                {% include "work/work_navbar.html" %}
+                <div class="workplace" id="workplace">
+                    <h2 class="workplace__title">Подписанные документы</h2>
+                    
+                    <div class="docs-heading">
+                        <span></span>
+                        <p><i class="material-icons">description</i> Название</p>
+                        <p><i class="material-icons">workspace_premium</i>Сертификат | Архивы</p>
+                    </div>
+                    <div class="docs-wrapper">
+                        {% for el in archive %}
+
+                        <div class="document">
+                            <div class="document__img"><img src="{% static 'img/signatured-doc.png' %}"></div>
+                            <p class="document__name">
+                                <a href="../media/{{ el.doc }}">{{ el.doc|truncatechars:15 }}</a>
+                            </p>
+                            <p class="document__format">
+                                <a href="../media/{{ el.file_serv }}">{{ el.file_serv|truncatechars:15 }}</a>
+
+                            </p>
+                            <a  href="archive_del/{{ el.id }}" class="document__del-btn"><i class="material-icons">delete</i></a>
+                        </div>
+                        {% endfor %}
+
+                        {% for el in archive_zip %}
+
+                        <div class="document">
+                            <div class="document__img"><img src="{% static 'img/signatured-doc.png' %}"></div>
+                            <p class="document__name">
+                                <a href="../media/{{ el.doc }}">{{ el.doc|truncatechars:15 }}</a>
+                            </p>
+                            <p class="document__format">
+                                <a href="../media/{{ el.file_serv }}">{{ el.file_serv|truncatechars:15 }}</a>
+
+                            </p>
+                            <a  href="archive_del/{{ el.id }}" class="document__del-btn"><i class="material-icons">delete</i></a>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    
+                </div>
+            </div>
+{% endblock %}

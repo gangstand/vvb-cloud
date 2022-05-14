@@ -1,0 +1,59 @@
+{% extends "work/work_base.html" %}
+
+{% load static %}
+
+{% block content %}
+            <div class="wrapper">
+                {% include "work/work_navbar.html" %}
+
+                <div class="workplace" id="workplace">
+                    <h2 class="workplace__title">Подписание документов</h2>
+                    
+                    <form  class="workplace__form" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="upload"  >
+                            <div class="form-group">
+                              <label class="label" for="doc-file">
+                                <i class="material-icons">file_copy</i>
+                                <span class="title">Выберите документ</span>
+                                <input @click="setDocTouch" type="file" name="doc-file" @change="setDoc" id="doc-file" >
+                                
+                              </label>
+                              <p v-if="checkNullDoc()" class="file-warn file-warn--black">[[errors.docNull]]</p>
+                              <p v-else-if="checkValidDoc()" class="file-warn">[[errors.isImg]]</p>
+                              <p v-else-if="checkNameDoc()" class="file-warn">[[errors.isSpace]]</p>
+                              <p v-else class="file-name">[[docName]]</p>
+                              
+                            </div>
+                        </div>
+
+                        <div class="upload">
+                            <div v-if="isDoc" class="form-group">
+                              <label class="label" for="sert-file">
+                                <i class="material-icons">folder_zip</i>
+                                <span class="title">Выберите архив</span>
+                                
+                                <input @click="setSertTouch" type="file" name="zip" @change="setSert" id="sert-file">
+                              </label>
+                              
+                              <p v-if="checkNullSert()" class="file-warn file-warn--black">[[errors.sertNull]]</p>
+                              <p v-else-if="checkValidSert()" class="file-warn">[[errors.notSert]]</p>
+                              <p v-else class="file-name">[[sertName]]</p>
+                            </div>
+                        </div>
+
+                        <button v-if="isSert" :disabled="checkValid()" class="workplace__submit"><i class="material-icons">lock_open</i>Расшифровать</button>
+                    </form>
+                    
+                    
+
+                    <div class="help">
+                        <div class="help__num"> [[messageNumber]] </div>
+                        <p class="help__text">[[ messages[messageNumber] ]]</p>
+                    </div>
+                    
+                </div>
+            </div>
+<script src="{% static '/js/decrypt.js' %}"></script>
+{% endblock %}

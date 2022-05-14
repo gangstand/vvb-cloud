@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+                <section class="section section--welc">
+
+                <article class="article article--welc">
+                    <h1 class="title">Как самостоятельно подписать документ электронной подписью?</h1>
+                    <p class="text">Этот вопрос возникает, когда владельцу сертификата электронной подписи нужно подписать документ вне информационных систем, в которых уже встроены
+                        механизмы создания и проверки электронной подписи. Рассмотрим варианты, как подписать документ квалифицированной электронной подписью.
+                    </p>
+
+                    <div class="btn-prime">
+                        <a href="{% url 'archive' %}">Получить электронную подпись</a>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Фоновые элемент -->
+            <div class="slant slant--rev" style="background-image: url({% static "img/background/slant-reverse-b-s.png" %});"></div>
+            <!-- -->
+
+            <section class="section section-desc">
+                <article class="article article-desc">
+                    <h2 class="title title--white">Воспользуйтесь нашим веб-приложением</h2>
+                    <h3 class="undertitle undertitle--white">Для документов формата PDF, Word, RTF и других</h3>
+                    <p class="text">
+                        Вы можете использовать нам сервис для работы с электронной подписью. Пройдите регистрацию и авторизуйтесь на нашем сайте.
+                        В личном кабинете вы можете подписать документ с помощью вашего сертификата. Есть возможность работы с файлами формата PDF,
+                        DOCX, RTF и многими другими. Также с нашим веб-приложением вы можете зашифровать документ с помощью RSA ключей и
+                        расшифровать его.
+                    </p>
+
+                    <div class="btn-prime">
+                        <a href="{% url 'archive' %}">Получить электронную подпись</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Фоновые элемент -->
+            <div class="slant slant--rev" style="background-image: url({% static "img/background/slant-b-s.png" %});"></div>
+            <!-- -->
+
+            <section class="section section-desc section-desc--white" style="padding-top: 30px;">
+                <article class="article article-desc">
+                    <h2 class="title">Установить VVB.Cloud на ПК</h2>
+                    <p class="text">
+                        У вас есть возможность подписывать файлы PDF через программное обеспечение на вашем компьютере.
+                        Вы буквально можете подписать документ росписью из вашего паспорта. Для этого вам необходимо скачать
+                        и установить программу на ваш компьютер.
+                    </p>
+
+                    <div class="btn-prime">
+                        <a target="_blank" href="https://drive.google.com/file/d/14rCvlf3rfEis9FGsGkeXRe9WZw8cNWO8/view?usp=sharing">Получить электронную подпись</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Фоновые элемент -->
+            <div class="slant slant--rev" style="background-image: url({% static "img/background/splant-light-s.png" %}); height: 118px;"></div>
+            <!-- -->
+
+            <section class="section section-desc">
+                <article class="article article-desc">
+                    <h2 class="title title--white">Подписание с помощью КриптоПро</h2>
+                    <p class="text text--">
+                        Веб-приложение принимает электронную подпись ГОСТ Р 34.10-2012 (ГОСТ 34.10-2018)
+                        и с её помощью подписывает документ. Для работы с КриптоПро необходимо установить нужные
+                        плагины с официального сайта. Все шаги подробно описаны на <a class="clear"  target="_blank" href="https://www.cryptopro.ru/sites/default/files/products/cades/demopage/main.html">официальной странице КриптоПро</a>
+                    </p>
+
+                    <div class="btn-prime">
+                        <a href="{% url 'cryptopro' %} ">Получить электронную подпись</a>
+                    </div>
+                </article>
+            </section>
+
+
+{% endblock %}
