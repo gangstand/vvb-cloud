@@ -20,7 +20,7 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jn=mi@q1e)blu!+gln_t229(-t2^(li%rw+99lp=c6l-*c)rt^'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
